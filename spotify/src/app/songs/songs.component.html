@@ -1,0 +1,40 @@
+
+<mat-card>
+    <h1>Click to get the songs available</h1>
+    <button (click)="getAllSongs()">Get all Songs</button>
+     <div class="row">
+         <div class="col-12"><br>
+             <table class="table table-image" style="background-color:rgba(0, 60, 255, 0.705)">
+                 <thead>
+                     <tr>
+                         
+                         <th style="margin-left:2rem ;" scope="col">SongID</th>
+                         <th style="margin-left:2rem ;" scope="col">SongName</th>
+                         <th style="margin-left:2rem ;" scope="col">Artist</th>
+                         <th style="margin-left:2rem ;" scope="col">ReleaseYear</th>
+                         
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr *ngFor="let obj of allsongsdata let i=index">
+                        
+                             <td style="color: white;">{{obj.songId}}</td>
+                             <td style="color: white;">{{obj.songName}}</td>
+                             <td style="color: white;">{{obj.artist}}</td>
+                             <td style="color: white;">{{obj.releaseYear}}</td>
+                             
+                             <!-- <td (click)="Play(obj.songName)"><button>Play</button> </td> -->
+                                <td><audio controls>
+                                    <source src="horse.ogg" type="audio/ogg">
+                                    <source src="../../assets/{{obj.songName}}.mp3" type="audio/mpeg">
+                                  Your browser does not support the audio element.
+                                  </audio></td>
+                     <br><br>
+                     </tr>
+                 </tbody>
+             </table>
+             
+         </div>
+     </div>
+ </mat-card>
+ 

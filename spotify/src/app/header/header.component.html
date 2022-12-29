@@ -1,0 +1,43 @@
+
+<!-- <div class="container">
+    <h3 class="abc" routerLink="/">Home</h3>
+    <h3 class="abc" routerLink="getsong">All Songs</h3>
+    <h3 class="abc" routerLink="add-new-song">Add Song</h3>
+    <h3 class="abc" routerLink="playlist">Playlist</h3>
+
+    <h3 style="margin-left:700px;" class="abc" *ngIf="display"  (click)="onlogout()"  routerLink="/">Logout
+    </h3>
+    <h3 style="margin-left:700px;" class="abc" *ngIf="!display" (click)="loggedin()" routerLink="login">Login</h3>
+    
+    
+    <h3 class="abc" *ngIf="!display"  routerLink="register">Registration</h3>
+  </div> -->
+
+
+  <p>
+    <mat-toolbar color="primary">
+      <a routerLink="/"> <mat-icon class="icon">home</mat-icon></a>
+      <a style="margin-left:20px;" routerLink="getsong"><mat-icon>music_video</mat-icon></a>
+      <a style="margin-left:20px;" routerLink="playlist"><mat-icon>radio</mat-icon></a>
+      <a style="margin-left:20px;" routerLink="search"><mat-icon>search</mat-icon></a>
+      <span class="example-spacer"></span>
+        <h3 class="example-icon" class="abc" *ngIf="display"  (click)="onlogout()"  routerLink="/">Logout
+        </h3>
+        <h3 class="example-icon" class="abc" *ngIf="!display" (click)="loggedin()" routerLink="login">Login</h3>
+        
+        <div style="padding-left:20px;">
+           <a routerLink="register"> <mat-icon class="icon">person</mat-icon></a>
+    </div>
+    <div style="padding-left:20px;">
+    <a routerLink="add-new-song">  <mat-icon>add</mat-icon></a>
+    </div>
+    </mat-toolbar>
+  </p>
+  <div>
+  <!-- <app-authentication [display]></app-authentication> -->
+  <router-outlet></router-outlet>
+</div>
+
+
+
+

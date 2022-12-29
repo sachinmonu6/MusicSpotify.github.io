@@ -1,0 +1,48 @@
+<div>
+<form  style="background-color: #1DB954; text-align: center;"[formGroup]="addPlaylistFormGroup" (ngSubmit)="addPlaylist()">
+  <h1>Add Playlist</h1>
+  <div>
+    <label for="pname">Enter Playlist Name</label>
+    <input type="pname"  formControlName="pname"/>
+  </div>
+  <input type="submit" value="Generate Playlist" />
+</form>
+<div>
+
+<hr>
+
+<div>
+<Form style="background-color: #1DB954; text-align: center;"  [formGroup]="deletePlaylistFormGroup" (ngSubmit)="deletePlaylist()">
+  <h1>Delete Playlist</h1>
+  <div>
+    <label for="pname">Enter Playlist Name</label>
+    <input type="delete"  formControlName="pname"/>
+  </div>
+  <input type="submit" value="Delete Playlist"  />
+</Form>
+</div>
+
+
+
+<hr>
+<div>
+<button (click)="getAllPlaylists()">Get all Playlist</button>
+<table>
+  <tr>
+      <td>PlistName</td>
+      <!-- <td>Email-Id</td> -->
+  </tr>
+  <tr *ngFor="let obj of plistdataa">
+      <td>{{obj.pname}}</td>
+      <!-- <td>{{obj.emailId}}</td> -->
+  </tr>
+</table>
+
+
+<hr>
+
+<button class="abc" routerLink="/addsong"><u>More Action On PlayList</u></button>
+
+
+
+

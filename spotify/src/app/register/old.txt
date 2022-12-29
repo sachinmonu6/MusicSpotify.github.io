@@ -1,0 +1,44 @@
+
+<div style="background-color: #1DB954;">
+    <div class="container">
+      <h1 style="text-align: center;">Register Here</h1>
+      <form [formGroup]="userFormGroup" (ngSubmit)="signup()" style="text-align: center;">
+       
+  
+        <div  class="row" >
+          <label class="col"for="emailid">Emaild ID</label>
+          <input class="col" type="emailid" formControlName="emailid" />
+          <!-- <div *ngIf="emailid.invalid" class="alert alert-danger">
+            Emailid error
+          </div>  -->
+        </div >
+        <div class="row" style="text-align: center;">
+          <label class="col" for="userid">User Id</label>
+          <input class="col" type="text" formControlName="userid" />
+          <!-- <div *ngIf="userid.invalid" class="alert alert-danger">
+            userid error
+          </div> -->
+        </div>
+  
+        <div class="row" style="text-align: center;">
+          <label class="col" for="password">Password</label>
+          <input class="col" type="password" formControlName="password" />
+          <!-- <div *ngIf="password.invalid" class="alert alert-danger">
+            Password error
+          </div> -->
+        </div>
+  
+  
+        <div class="row" style="text-align: center;">
+          <label class="col" for="role">Role</label>
+          <input class="col" type="text" formControlName="role" />
+          <!-- <div *ngIf="role.invalid" class="alert alert-danger">
+            role error
+          </div> -->
+        </div>
+  
+        <input type="submit" value="Signup" />
+  
+      </form>
+    </div>
+</div>

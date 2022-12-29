@@ -1,0 +1,64 @@
+
+<div>
+  <form  style="background-color: #1DB954; text-align: center;" (ngSubmit)="addSong()" >
+    <h1>Add Song To Play-List</h1>
+    <div>
+      <label for="pname">Enter Playlist Name</label>
+      <input type="pname" formc [(ngModel)]="pname" [ngModelOptions]="{standalone:true}" />
+    </div>
+    <div>
+      <label for="songid" style="margin-right: 38px;">Enter Song Id</label>
+      <input type="songid" [(ngModel)]="songid" [ngModelOptions]="{standalone:true}"/>
+    </div>
+    <input type="submit" value="Add" />
+  </form>
+  </div>
+
+
+<br>
+<br>
+<hr>
+  <label for="listname">Enter Playlist to Play</label>
+  <input type="listname" [(ngModel)]="listname"/>
+<button (click)="getAllPSongs()">Get all Songs</button>
+<mat-card>
+   <div class="row">
+       <div class="col-12"><br>
+           <table class="table table-image" style="background-color: #1DB954;">
+               <thead>
+                   <tr>
+                       
+                       <th style="margin-left:2rem ;" scope="col">SongID</th>
+                       <th style="margin-left:2rem ;" scope="col">SongName</th>
+                       <th style="margin-left:2rem ;" scope="col">Artist</th>
+                       <th style="margin-left:2rem ;" scope="col">ReleaseYear</th>
+                       
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr *ngFor="let obj of allsongsdata let i=index">
+                           <td>{{obj.songId}}</td>
+                           <td>{{obj.songName}}</td>
+                           <td>{{obj.artist}}</td>
+                           <td>{{obj.releaseYear}}</td>
+                           
+                           <td (click)="Play(obj.songName)"><button>Play</button> </td>
+
+                            <td><audio controls>
+                              <source src="../../assets/{{obj.songName}}.ogg" type="audio/ogg">
+                              <source src="../../assets/{{obj.songName}}.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                            </audio></td>
+                   <br><br>
+                   </tr>
+               </tbody>
+           </table>
+           
+       </div>
+   </div>
+</mat-card>
+
+
+
+
+

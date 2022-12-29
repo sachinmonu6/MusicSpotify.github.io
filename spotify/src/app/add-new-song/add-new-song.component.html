@@ -1,0 +1,38 @@
+<div style="background-color: #1DB954; border-width:1px; border-style:solid; box-shadow: 0px 3px 8px #333; margin-left:200px; margin-right:200px; margin-top:50px;">
+    <form (ngSubmit)="addNewSong()"  [formGroup]="songDetails" >
+        <h1 style="margin-top:20px;">Add New Song</h1>
+        <div class="row" >
+            <label class="col">Song-Id :-</label>
+              <input class="col" id="songId" name="songId" type="text" matInput placeholder="songId" required formControlName="songId"/>
+            </div>
+
+            <div class="row">
+                <label class="col">Song Name :-</label>
+                  <input class="col" name="songName" matInput formControlName="songName" placeholder="songName" required/>
+                </div>
+
+                <div class="row">
+                    <label class="col">Song artist :-</label>
+                        <input class="col" name="artist" matInput formControlName="artist" placeholder="artist" required/>
+                      </div>
+
+                      <div class="row">
+                        <label class="col">Release Year :-</label>
+                            <input class="col" name="releaseYear" matInput formControlName="releaseYear" placeholder="releaseYear" required/>
+                          </div>
+
+                          <div class="row">
+                            <label class="col">Play-List Name :-</label>
+                                <input class="col" name="pname" matInput formControlName="pname" placeholder="pname" required/>
+                              </div>
+
+                          <div  class="row">
+                            <label class="col"> Choose the File to upload: </label>
+                            <input class="col" type="file" id="myFile" /> <br /><br />
+                          </div>
+                              
+        <div style="margin-top:10px;">
+          <button type="submit" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+      </div>
+          </form>
+    </div>

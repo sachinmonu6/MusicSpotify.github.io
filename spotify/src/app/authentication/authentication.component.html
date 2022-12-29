@@ -1,0 +1,103 @@
+<!-- 
+<form  style="background-color: #1DB954;" [formGroup]="loginFormGroup" (ngSubmit)="loginCheck()">
+  <h1 style="text-align: center;">Login Form</h1>
+  <div style="text-align: center;">
+    <label for="emailid">Emaild ID :-</label>
+    <input type="emailid" matInput formControlName="emailid" required/>
+  
+  </div>
+  <div style="text-align: center;">
+    <label for="password">Password :-</label>
+    <input type="password" formControlName="password" required />
+  </div>
+  <div style="text-align: center;">
+  <button mat-raised-button [disabled]="!loginFormGroup.valid" color="accent" type="submit" value="Login" (click)="login()">submit</button>
+  <button style="margin-left:1%;" mat-raised-button color="warn" routerLink="/forgotPassword">Forgot Password</button>
+</div>
+</form> -->
+
+
+
+<div class="container-fluid h-custom">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-md-9 col-lg-6 col-xl-5">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+        class="img-fluid" alt="Sample image">
+    </div>
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <form [formGroup]="loginFormGroup" (ngSubmit)="loginCheck()">
+        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+          <p class="lead fw-normal mb-2 me-3">Login Here </p>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control form-control-lg" formControlName="emailid" required
+            placeholder="Enter a valid email address" />
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-3">
+          <input type="password" id="form3Example4" class="form-control form-control-lg"
+            placeholder="Enter password" formControlName="password"/>
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Checkbox -->
+          <div class="form-check mb-0">
+            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+            <label class="form-check-label" for="form2Example3">
+              Remember me
+            </label>
+          </div>
+          <a href="/forgotPassword" class="text-body">Forgot password?</a>
+        </div>
+
+        <div class="text-center text-lg-start mt-4 pt-2">
+          <button type="submit" class="btn btn-primary btn-lg" [disabled]="!loginFormGroup.valid"
+            style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+          <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register" 
+              class="link-danger">Register</a></p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div
+
+style="position: fixed;
+left: 0;
+bottom: 0;
+height: 100px;
+
+width: 100%;"
+  class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+  <!-- Copyright -->
+  <div class="text-white mb-3 mb-md-0">
+    Copyright © 2022. All rights reserved.
+  </div>
+  <!-- Copyright -->
+
+  <!-- Right -->
+  <div>
+    <a href="tel:9876765678" class="text-white me-4">
+      <mat-icon> call</mat-icon>
+    </a>
+    <a href="#!" class="text-white me-4">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#!" class="text-white me-4">
+      <mat-icon>help</mat-icon>
+    </a>
+    <a href="#!" class="text-white">
+      <mat-icon>favorite</mat-icon>
+    </a>
+  </div>
+  <!-- Right -->
+</div>
+  
+

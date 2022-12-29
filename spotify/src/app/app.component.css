@@ -1,0 +1,24 @@
+
+    .abc{
+        display: inline-block;
+        padding-right: 10px;
+        color: white;
+        text-decoration: none;
+        margin-top:5px;
+        
+    }
+    .container{
+        width: 1500px;
+        height: 50px;
+        background-color:black ;
+    }
+    h3:hover{
+        background-color: #1DB954;
+    }
+    li{
+        display: inline-block
+    }
+
+    u {
+
+    }
